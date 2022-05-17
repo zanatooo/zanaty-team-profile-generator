@@ -1,4 +1,4 @@
-const Employee=require ("../Lib/Employee")
+const Employee = require ("../Lib/Employee")
 
 test("Test Employee Name", function(){
     const newHire = new Employee("Erik",222,"email@test.com")
