@@ -1,21 +1,49 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #0cc79c;
+    --secondary: rgb(245, 245, 245);
+}
+
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-.text-dark {
-    color: darkgray;
+#navbar {
+    background-color: var(--primary);
+    color: var(--secondary);
+    font-size: 50px;
 }
 
-.text-dark:hover {
-    background-color: rgb(187, 181, 181); 
+.navbar-brand {
+    font-size: 50px;
 }
 
-a {
-    color:darkgray;
+
+.card-header {
+    background-color: var(--primary);
+    
+    color: blue;
 }
 
-a:hover {
-    background-color: lightpink;
-    border-radius: 15%;
-    color: darkgray;
+.card-body {
+    background-color: var(--secondary);
+    color: rgb(9, 20, 172);
+}
+
+.container {
+    margin: 100px auto;
+    justify-content: space-evenly;
+    display: flex;  
+    
+}
+.card-header i {
+    float: left;
+    width: 30px;   
+}
+.card {
+    box-shadow: 10px 10px 8px;
+    
 }
