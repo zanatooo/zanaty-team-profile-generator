@@ -1,0 +1,21 @@
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.text-dark {
+    color: darkgray;
+}
+
+.text-dark:hover {
+    background-color: rgb(187, 181, 181); 
+}
+
+a {
+    color:darkgray;
+}
+
+a:hover {
+    background-color: lightpink;
+    border-radius: 15%;
+    color: darkgray;
+}
