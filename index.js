@@ -13,7 +13,7 @@ const renderHTML = require("./lib/GenerateHTML.js");
 
 // Employee array
 let employeesArr = [];
-ƒ
+
 // Questions array for all employees
 const questions = [           
     {
