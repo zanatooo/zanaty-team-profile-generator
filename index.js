@@ -10,7 +10,7 @@ const Engineer = require("./lib/Engineer.js");
 const Intern = require("./lib/Intern.js");
 const Manager = require("./lib/Manager.js");
 const renderHTML = require("./lib/GenerateHTML.js");
-
+let html=""
 // Employee array
 let employeesArr = [];
 
@@ -132,6 +132,15 @@ const questions = [
                 let employee = new Engineer(name, id, email, github);
                 employeesArr.push(employee);
                 addEmployee(employeesArr);
+            html+= `<div class="card">
+            <div class="card-body">
+            <h1 class="bg-primary">Engineer</h1>
+              <h3>Name: ${employee.name}</h3>
+              <p>ID: ${employee.id}</p>
+              <p>Email: ${employee.email}</p>
+              <p>Github: ${employee.github}</p>
+            </div>
+          </div>`
                 });
             }
             else if (role === "Manager") {
@@ -140,6 +149,16 @@ const questions = [
                         let employee = new Manager(name, id, email, officeNumber);
                         employeesArr.push(employee);
                         addEmployee(employeesArr);
+                        html+=`<div class="card">
+            <div class="card-body">
+            <h1 class="bg-warning">Manager</h1>
+              <h3>Name: ${employee.name}</h3>
+              <p>ID: ${employee.id}</p>
+              <p>Email: ${employee.email}</p>
+              <p>OfficeNumber: ${employee.officeNumber}</p>
+            </div>
+          </div>`
+                          
                     });
                 }
             else if (role === "Intern") {
@@ -148,6 +167,15 @@ const questions = [
                         let employee = new Intern(name, id, email, school);
                         employeesArr.push(employee);
                         addEmployee(employeesArr);
+                        html+=`<div class="card">
+                        <div class="card-body">
+                        <h1 class="bg-warning">Intern</h1>
+                          <h3>Name: ${employee.name}</h3>
+                          <p>ID: ${employee.id}</p>
+                          <p>Email: ${employee.email}</p>
+                          <p>School: ${employee.school}</p>
+                        </div>
+                      </div>`
                     });
             }
 
@@ -175,8 +203,22 @@ const questions = [
             }
 
             // calls the renderHTML function in the GenerateHTML.js file to create the index.html
-            
-            fs.writeFile(filePath, renderHTML(array), (err) => {
+            console.log(array)
+            var filecontent = `<!doctype html>
+            <html lang="en">
+              <head>
+                <meta charset="utf-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                <title>Bootstrap demo</title>
+                <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+              </head>
+              <body>
+                <h1>Profile Generator</h1>
+                ${html}
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+              </body>
+            </html>`
+            fs.writeFileSync("output/index.html", filecontent, (err) => {
         
                 if (err) {
                     return console.log(err);

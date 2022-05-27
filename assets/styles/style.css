@@ -1,26 +1,25 @@
-* body {
-    font-family: 'Poppins', sans-serif;
+* {
+    box-sizing: border-box;
 }
 
-.text-dark {
-    color: darkblue;
+:root {
+    --primary: #0cc79c;
+    --secondary: rgb(245, 245, 245);
 }
 
-.text-dark:hover {
-    background-color: rgb(187, 181, 181); 
+body {
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-a {
-    color: darkblue;
+#navbar {
+    background-color: var(--primary);
+    color: var(--secondary);
+    font-size: 50px;
 }
 
-a:hover {
-    background-color: lavender;
-    border-radius: 15%;
-    color: darkblue;
+.navbar-brand {
+    font-size: 50px;
 }
-
-
 
 
 .card-header {
