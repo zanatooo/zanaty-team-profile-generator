@@ -2,7 +2,7 @@
 
 This app is to build a Node.js command-line application that takes in information about employees on a software engineering team and generates an HTML webpage that displays summaries for each person. Because testing is key to making code maintainable, you’ll also write unit tests for each part of your code and ensure that it passes all of them.
 
-Because this application won’t be deployed, Here is [link to a walkthrough video]() and screen shots that demonstrates its functionality and all of the tests passing.
+Because this application won’t be deployed, Here is [link to a walkthrough video](https://watch.screencastify.com/v/hz2kUvJWiUjJnG4guWH6) and screen shots that demonstrates its functionality and all of the tests passing.
 [Screenshot 1](./assets/images/passing-the-tests.png).
 [Screenshot 2](./assets/images/Entering-Team-Info.png).
 [Screenshot 3](./assets/images/my-team-page.png).
